@@ -1,6 +1,4 @@
- 
- 
- .title-logo {
+.title-logo {
             width: 100%;
             height: 60px;
             background: #262626;
@@ -59,6 +57,11 @@ h1 {
     top: 60px;
     width: 50%;
     height: 500px;
+}
+/* Default responsive iframe size for desktop and mobile */
+.form-location-box iframe {
+    width: 100%;
+    height: 310px;
 }
 
 .form-contact {
@@ -121,6 +124,7 @@ h1 {
   top: 335px;
   padding: 16px 40px;
   border-radius: 7px;
+  left: 0; 
 }
 .form-btn:hover {
     background: #285e85;
@@ -470,7 +474,7 @@ h1 {
             transition: 0.3s ease-in-out;
             background: #1B3C53;
             border: none;
-            position: absolute;
+            position: absolute; /* Keep absolute for desktop layout */
             color: antiquewhite;
             top: 335px;
             padding: 16px 40px;
@@ -496,34 +500,168 @@ h1 {
                 flex-direction: column;
             }
         }
-
-
-
+/* START OF RESPONSIVE FIXES */
 @media (max-width: 767px) {
+    /* Contact Section Layout */
    .contact-section {
     position: relative;
     top: 20px;
-
-    height: 900px;
+    padding-top: 20px;
+    height: auto; /* Remove fixed height */
    }
- .form-location-box {
-    display: grid;
+ .form-contact-location {
+    flex-direction: column; /* Stack form and map */
+    padding-left: 5%; /* Add percentage padding */
+    padding-right: 5%;
+    gap: 40px;
+    padding-top: 80px; 
+    padding-bottom: 40px;
  }
-   .form-contact {
-    position: absolute;
-    top: 400px;
-    width: 500px;
-   }
-     iframe {  /* Keeps the red border for debugging */
-        width: 500px;             /* Make iframe take up full width of its container */
-        height: 300px;           /* Adjust the height as needed */
-        display: block;          /* Remove any inline-block behavior */      /* Centers the iframe horizontally */
-        position: relative;      /* Allow vertical centering */
-        top: 20px;
-        left: -270px;               /* Adjust vertical position as needed */
+    /* Centering H1 */
+    .form-contact-location h1 {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
     }
-  
+ 
+    /* Main boxes full width and no fixed height */
+   .form-location-box {
+    width: 100%; 
+    height: auto;
+    top: auto;
+   }
+   
+    /* Form itself full width, content stacked, and centered */
+   .form-contact {
+    position: static; /* No absolute positioning on mobile */
+    top: auto;
+    width: 100%; 
+    margin: 0; 
+    height: auto;
+   }
+   
+   /* Form box converts from grid to flex column for better stacking */
+   .form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+   }
+
+    /* Form Buttons - remove absolute positioning and make full width */
+    .form-btn {
+        position: static; 
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px 0; 
+    }
+    
+    .return {
+        position: static;
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .return-btn {
+        position: static; 
+        width: 100%;
+        padding: 15px 0; 
+        right: auto;
+    }
+    
+    /* Map fix - use 100% width, height is set by default or .form-location-box iframe */
+     .form-location-box iframe {
+        width: 100%;             
+        height: 300px;           
+        display: block;          
+        position: static;      
+        left: auto;               
+    }
+
+    /* Latest Updates Section */
+    .latest-updates {
+      margin-top: 100px; 
+      height: auto; 
+    }
+    
+    .updates-header {
+      width: 90%; 
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    
+    .update-contact {
+      width: 90%; 
+      height: auto;
+      flex-direction: column; /* Stack all items */
+      align-items: flex-start; /* Align content left */
+      gap: 20px;
+      margin: auto;
+    }
+    
+    /* Phone and Email sections full width and aligned left */
+    .num, .num2 {
+      width: 100%;
+      height: auto;
+      justify-content: flex-start; 
+    }
+    
+    .num i, .num2 i {
+      margin-left: 0; 
+      margin-top: 0; 
+    }
+    
+    .num span, .num2 span {
+      margin-top: 0;
+      margin-bottom: 0; 
+      align-self: center; /* Center text vertically with icon */
+    }
+    
+    /* Social Icons section */
+    .icons-email-update {
+      width: 100%;
+      margin-left: 0;
+      height: auto;
+      justify-content: flex-start; /* Align icons left */
+      margin-bottom: 20px;
+      padding-left: 20px; 
+    }
+
+    .icons-email-update i {
+      margin-top: 0;
+      margin-left: 0;
+    }
+    
+    /* Footer responsiveness */
+    .service-footer {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .service-content-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+    }
+
+    .service-content-footer p {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .service-logo {
+        position: static;
+        margin: 10px auto;
+    }
 }
+/* END OF RESPONSIVE FIXES */
+
+/* The original mobile styles were removed and replaced by the block above */
 
 
 .menu-section.sticky {

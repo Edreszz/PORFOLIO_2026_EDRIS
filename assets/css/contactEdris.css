@@ -1,0 +1,149 @@
+.latest-updates {
+  margin-top: 200px;
+  width: 100%;
+  height: 300px;
+}
+
+.updates-header {
+  width: 30%;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+.updates-header h3 {
+  font-size: 16px;
+  color: darkgray;  
+  font-family: 'Inter', sans-serif;
+}
+.updates-header span {
+  margin-top: -4px;
+  color: darkgray;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.update-contact {
+  margin-top: 20px;
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  display: flex;
+}
+
+.num {
+  width: 30%;
+  height: 100%;
+  display: flex;
+}
+
+.num i {
+  border: 0.5px solid #76867e;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  margin-left: 20px;
+  margin-top: 60px;
+}
+
+.num i:hover {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+.num span {
+  color: #fff;
+  margin-top: 85px;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+
+.num2 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.num2 i {
+  border: 0.5px solid #76867e;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  margin-left: 20px;
+  margin-top: 60px;
+}
+
+.num2 i:hover {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+.num2 span {
+  color: #fff;
+  margin-top: 85px;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+.num .num-email {
+  color: #fff;
+  margin-top: 85px;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+.icons-email-update {
+  width: 30%;
+  margin-left: 120px;
+  height: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.icons-email-update i {
+  border: 0.5px solid #76867e;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  margin-left: 27px;
+  margin-top: 70px;
+}
+
+.icons-email-update i:hover {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+.icons-email-update a {
+  text-decoration: none;
+}

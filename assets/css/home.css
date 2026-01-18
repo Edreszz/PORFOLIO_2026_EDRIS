@@ -403,6 +403,7 @@
             margin: auto;
         }
         .feature-title  {
+            margin-left: 50px;
             font-size: 45px;
             font-family: 'inter', sans-serif;
             font-weight: 600;

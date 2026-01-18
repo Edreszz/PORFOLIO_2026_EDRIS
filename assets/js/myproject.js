@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTopButton.classList.remove('visible');
 
   const updateVisibility = () => {
-    if (window.pageYOffset > 50) {
+    if (window.scrollY > 50) {
       backToTopButton.classList.add('visible');
       backToTopButton.style.display = 'block'; // fallback if CSS class not present
     } else {
@@ -147,4 +147,86 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial
   onResize();
   onScroll();
+});
+
+// ===== PROJECT MODAL FUNCTIONALITY =====
+
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('projectModal');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalClose = document.getElementById('modalClose');
+  const projectBoxes = document.querySelectorAll('.projects-box');
+  
+  // Modal elements
+  const modalTitle = document.getElementById('modalTitle');
+  const modalTech = document.getElementById('modalTech');
+  const modalImage = document.getElementById('modalImage');
+  const liveDemoBtn = document.getElementById('liveDemo');
+  const sourceCodeBtn = document.getElementById('sourceCode');
+
+  // Open modal function
+  function openModal(box) {
+    const title = box.querySelector('.div-title h4').textContent;
+    const tech = box.querySelector('.div-title span').textContent;
+    const image = box.querySelector('.project1-image').src;
+    const liveDemo = box.getAttribute('data-live-demo');
+    const sourceCode = box.getAttribute('data-source-code');
+
+    modalTitle.textContent = title;
+    modalTech.textContent = tech;
+    modalImage.src = image;
+    liveDemoBtn.href = liveDemo;
+    sourceCodeBtn.href = sourceCode;
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  }
+
+  // Close modal function
+  function closeModal() {
+    modal.classList.add('closing');
+    setTimeout(() => {
+      modal.classList.remove('active');
+      modal.classList.remove('closing');
+      document.body.style.overflow = 'auto'; // Re-enable background scroll
+    }, 300);
+  }
+
+  // Add click event to all project boxes
+  projectBoxes.forEach(box => {
+    box.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal(this);
+    });
+
+    // Add cursor pointer style on hover
+    box.style.cursor = 'pointer';
+  });
+
+  // Close modal when close button is clicked
+  modalClose.addEventListener('click', closeModal);
+
+  // Close modal when overlay is clicked (clicking outside the modal)
+  modalOverlay.addEventListener('click', closeModal);
+
+  // Close modal when ESC key is pressed
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Prevent modal from closing when clicking inside modal-content
+  modal.querySelector('.modal-content').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // Open links in new tab and keep modal open
+  liveDemoBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  sourceCodeBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
 });

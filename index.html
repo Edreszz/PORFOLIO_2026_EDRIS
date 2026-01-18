@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - Edris Personal Portfolio</title>
+    <title>Index - Edris Personal Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/home.css">
+     <link rel="stylesheet" href="assets/css/main.css">
+     <link rel="icon" type="image/png" href="spiderGif.gif">
     <link rel="stylesheet" href="intro.css">
-</head>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Enhanced UI for let-me-help-you class */
+        .let-me-help-you {
+            background: linear-gradient(135deg, #1f1f1f 0%, #2d2d2d 100%);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            border-top: 1px solid #333;
+        }
+
+        .let-me-help-you h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .let-me-help-you p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .let-me-help-you .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .let-me-help-you .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head> 
 <body>
 
     <header class="header-sticky" id="navbar">
@@ -19,11 +66,10 @@
         <div class="contact-link">
             <a href="home.html">
                 <div class="hires-me">
-                    <a href="hire.html">Hire Me</a>
+                    <a href="contact.html">Hire Me</a>
                 </div>
             </a>
             <div class="container">
-        <button class="popup-btn">Let's talk</button>
     </div>
 
         </div>
@@ -92,7 +138,7 @@
             </a>
 
             <a href="services.html" class="menu-box">
-                <img src="service.PNG" class="home-img">
+                <img src="assets/images/main2ser.PNG" class="home-img">
                 <i class="fa-solid fa-right-long" class="right-arrow-link"></i>
                 <h4>SERVICE</h4>
             </a>
@@ -115,22 +161,16 @@
                 <h4>BLOGS</h4>
             </a>
             
-            <a href="FAQ.html" class="menu-box">
-                <img src="faq.PNG" class="home-img">
-                <i class="fa-solid fa-right-long" class="right-arrow-link"></i>
-                <h4 class="faq-details">FAQ</h4>
-            </a>
-            
         
-            <a href="hire.html" class="menu-box">
-                <img src="contact.PNG" class="home-img">
+            <a href="contact.html" class="menu-box">
+                <img src="assets/images/ContactMain.PNG" class="home-img">
                 <i class="fa-solid fa-right-long" class="right-arrow-link"></i>
                 <h4>CONTACT</h4>
             </a>
-            <a href="404.html" class="menu-box">
+            <!-- <a href="404.html" class="menu-box">
                 <img src="four.PNG" class="home-img">
                 <i class="fa-solid fa-right-long" class="right-arrow-link"></i>
-                <h4 class="eror-four">404 PAGE</h4>
+                <h4 class="eror-four">404 PAGE</h4> -->
             </a>
         </div>
     </section>                                               
@@ -139,7 +179,7 @@
     <!-- EDRIS FEATURES HERE -->
     <section class="edris-features">
         <div class="items-feature-container">
-            <h2 class="feature-title">Edris Features</h2>
+            <h2 class="feature-title">Features</h2>
             <div class="items-container">
                 <!-- 1ST BOX -->
                 <div class="items-box">
@@ -237,6 +277,14 @@
         </div>
     </section>
                    
+    <section class="let-me-help-you">
+        <div class="content-container">
+            <h2>Let Me Help You</h2>
+            <p>Need a hand with your next project? I'm here to help you build scalable and efficient web applications.</p>
+            <a href="contact.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
     <footer class="last-footer">
         <div class="last-footer-content">
             <h1>Bring your ideas online with speed and precision.</h1>

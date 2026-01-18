@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/assets/css/main.css">
    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" href="spiderGif.gif">
 </head>
 <body>
        <header class="header-sticky" id="navbar">
@@ -26,7 +27,7 @@
 <div class="contact-link">
      <a href="">
  <div class="hires-me">
-    <a href="hire.html" class="btn-same">Hire Me</a>
+    <a href="contact.html" class="btn-same">Hire Me</a>
    </div>
 </a>
 </div>
@@ -56,9 +57,9 @@
         <ul>
             <li><a href="home.html" id="home-title">Home</a></li>
             <li class="mobile-dropdown">
-                <a href="services.html" class="mobile-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <a href="mainservice.html" class="mobile-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                 <div class="mobile-dropdown-menu">
-                    <a href="services.html">Services</a>
+                    <a href="mainservice.html">Services</a>
                     <a href="serviceDetail.html">Service Details</a>
                 </div>
             </li>
@@ -79,19 +80,18 @@
                 <div class="mobile-dropdown-menu">
                     <a href="aboutUs.html">About Edris</a>
                     <a href="project.html">Project</a>
-                    <a href="FAQ.html">FAQ</a>
                     <a href="404.html">Resume</a>
-                    <a href="404.html">404 Page</a>
+        
                 </div>
             </li>
-            <li><a href="hire.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="hire.html" class="mobile-hire-btn">Hire Me</a>
+        <a href="contact.html" class="mobile-hire-btn">Hire Me</a>
     </div>
 </div>
 
         <div class="main-logo">
-           <a href="home.html"><img src="main-logo.png" alt="main-logo" class="edris-logo"></a>
+           <a href="home.html"><img src="./main-logo.png" alt="main-logo" class="edris-logo"></a>
         </div>
         <div class="list-menu-container">
             <ul>
@@ -99,9 +99,9 @@
                     <a href="home.html" id="home-title">Home</a>
                 </li>
                 <li class="dropdown">
-                    <a href="services.html" class="dropdown-toggle">Services</a>
+                    <a href="mainservice.html" class="dropdown-toggle">Services</a>
                     <div class="dropdown-menu ">  
-                        <a href="services.html" class="service-detail">Services</a>
+                        <a href="mainservice.html" class="service-detail">Services</a>
                         <a href="serviceDetail.html" class="service-detail">Service Details</a>
                     </div>
                 </li>
@@ -120,13 +120,11 @@
                     <div class="dropdown-menu">
                         <a href="aboutUs.html" class="page-detail">About Edris</a>
                         <a href="project.html" class="page-detail">Project</a>
-                        <a href="FAQ.html" class="page-detail">FAQ</a>
                         <a href="404.html" class="page-detail">Resume</a>
-                        <a href="404.html" class="page-detail">404 Page</a>
                     </div>
                 </li>
                 <li>
-                    <a href="hire.html" class="contact-id">Contact</a>    
+                    <a href="contact.html" class="contact-id">Contact</a>    
                 </li>
             </ul>
         </div>
@@ -139,10 +137,13 @@
                                 <!--StartMy Profile-->
 
      <section class="my-profile scale-in">
+          <div class="main-logo-home">
+            <a href="#"><img src="main-logo.png"></a>
+          </div>
            <div class="home-content">
              <div class="content-container">
                 <h1><br class="ocampo"><span class="ocampo">Edris Ocampo</span></h1>
-            <p>Aspring Web developer and UI/UX Designer</p>
+           <p class="subHeader">Web Developer & UI/UX Designer focused on clean interfaces  <br> and intuitive user experiences.</p>
              </div>
            </div>
            <div class="profile-container">
@@ -167,7 +168,7 @@
             </div>
            </div>
            <div class="get-resume">
-            <a href="UpdatedResume.pdf" download="Edris Ocampo" class="btn">Get Resume</a>
+            <a href="Edris_Resume.pdf" download="Edris Ocampo" class="btn">Get Resume</a>
             <i class="fa-solid fa-download"></i>
            </div>
         </section>                           
@@ -180,7 +181,7 @@
              <p>|| <span class="my-services-span">My Services</span></p>
            </div>
            <div class="title-service">
-            <h1>Service Provide For My Clients.</h1>
+            <h1>What I Can Do for You?</h1>
            </div>
 
     </div>
@@ -188,50 +189,67 @@
     <div class="services-container">
         <!-- Development Services -->
         <div class="service-category slide-in-left">
-            <h3>Development</h3>
+            <h3>Web Development</h3>
             <div class="service-card">
-                <h4>HTML/CSS</h4>
-                <p>Clean, semantic code for responsive websites</p>
+                <h4>HTML / CSS Development</h4>
+                <p>Clean, semantic, and responsive website layouts following modern standards.</p>
             </div>
             <div class="service-card">
-                <h4>Basic JavaScript</h4>
-                <p>Interactive and dynamic web functionality</p>
+                <h4>JavaScript (Basic to Intermediate)</h4>
+                <p>Interactive UI features like sliders, modals, form validation, and dynamic content.</p>
             </div>
             <div class="service-card">
-                <h4>Animation</h4>
-                <p>Engaging motion and transitions</p>
+                <h4>Responsive Web Design</h4>
+                <p>Mobile-first layouts that work smoothly on all screen sizes.</p>
+            </div>
+             <div class="service-card">
+                <h4>Website Performance Optimization</h4>
+                <p>Optimized images, clean code, and faster load times.</p>
             </div>
         </div>
         
-        <!-- Illustration Services -->
+        <!-- Web Design (UI/UX) Services -->
         <div class="service-category slide-in-right">
-            <h3>Illustration</h3>
+            <h3>Web Design (UI/UX)</h3>
             
 
             <div class="service-card">
-                <h4>Icon Set</h4>
-                <p>Custom icon collections</p>
+                <h4>UI Design (Figma / Framer)</h4>
+                <p>Modern, clean, and user-friendly interface designs.</p>
             </div>
             <div class="service-card">
-                <h4>Illustration Guide</h4>
-                <p>Style guides for consistent visuals</p>
+                <h4>UX Design & User Flow</h4>
+                <p>Logical layout, clear navigation, and improved user experience.</p>
             </div>
             <div class="service-card">
-                <h4>Motion Graphic</h4>
-                <p>Animated illustrations</p>
+                <h4>Landing Page Design</h4>
+                <p>Conversion-focused landing pages for businesses or personal brands.</p>
+            </div>
+             <div class="service-card">
+                <h4>Design to Code Conversion</h4>
+                <p>Convert Figma designs into responsive HTML/CSS websites.</p>
             </div>
         </div>
         
         <!-- UI/UX Services -->
         <div class="service-category slide-in-left">
-            <h3>UI/UX Design</h3>
+            <h3>Website Features & Enhancements</h3>
             <div class="service-card">
-                <h4>Landing Pages</h4>
-                <p>High-converting page designs</p>
+                <h4>Scroll Animations & Micro-Interactions</h4>
+                <p>Smooth animations and transitions to enhance user engagement.        <br>
+                            </p>
             </div>
             <div class="service-card">
-                <h4>User Flow</h4>
-                <p>Optimized user journeys</p>
+                <h4>SEO-Friendly Structure</h4>
+                <p>Proper HTML structure and basic on-page SEO practices.</p>
+            </div>
+            <div class="service-card">
+                <h4>Contact Forms Integration</h4>
+                <p>Functional contact forms with validation.</p>
+            </div>
+            <div class="service-card">
+                <h4>Website Maintenance & Updates</h4>
+                <p>Content updates, bug fixes, minor improvements, etc.</p>
             </div>
         </div>
           </div>
@@ -245,13 +263,13 @@
    <section class="skills-section">  
            <div class="text-services">    
            <div class="my-p">
-             <p>|| <span class="special-span">Special Skills</span></p>
+             <p>|| <span class="special-span">Core Qualities</span></p>
            </div>
            <div class="title-service">
-            <h1 class="special-title">My Special Skill<br> Field Here.</h1>
+            <h1 class="special-title">My Soft Skills<br> Field Here.</h1>
            </div>
            <div class="get-resume">
-            <a href="#" class="btn">Get Resume</a>
+            <a href="Edris_Resume.pdf" download="Edris Ocampo" class="btn">Get Resume</a>
             <i class="fa-solid fa-download"></i>
            </div> 
           </div>
@@ -265,7 +283,7 @@
         <!-- Add a container element -->
 <div class="container">
   <!-- Your content here -->
-  <a href="" class="open-page">Read More</a>
+  
   <div class="page-container">
     <div class="page-content">
       <!-- Add content to the page -->
@@ -289,7 +307,9 @@
         <span class="spanPercentage">50%</span>
         <div class="container" id="main-adaptive-container">
   <!-- Your content here -->
-  <a href="" class="open-page" id="adaptive-page">Read More</a>
+  
+  
+
   <div class="page-container" id="adaptive-container">
     <div class="page-content" id="adaptive-content">
       <!-- Add content to the page -->
@@ -314,7 +334,7 @@
         <span class="spanPercentage">85%</span>
         <div class="container" id="main-colaborative-container">
   <!-- Your content here -->
-  <a href="" class="open-page" id="colab-page">Read More</a>
+
   <div class="page-container" id="colab-container">
     <div class="page-content" id="colab-content">
       <!-- Add content to the page -->
@@ -338,7 +358,7 @@
         <span class="spanPercentage">75%</span>
         <div class="container" id="main-pressure-container">
   <!-- Your content here -->
-  <a href="" class="open-page" id="pressure-page">Read More</a>
+
   <div class="page-container" id="pressure-container">
     <div class="page-content" id="pressure-content">
       <!-- Add content to the page -->
@@ -361,6 +381,200 @@
 
 
 </section>
+
+
+  <!-- SHOWCASE M PROJECTS -->
+
+  <section class="projects-demo">
+    <div class="projects-wrapper">
+            <div class="text-services">    
+           <div class="my-p">
+             <p>|| <span class="special-span">Featured Projects</span></p>
+           </div>
+           <div class="title-service">
+            <h1 class="special-title">My Technical Skills<br> Field Here.</h1>
+           </div> 
+          </div>
+
+
+            <div class="project-box1">
+               <video autoplay loop muted playsinline>
+                <source src="assets/mp4/GLOWIQ.mp4">
+               </video>
+        </div>
+         <div class="projects-contain-box">
+            <h3>GlowIQ</h3>
+            <p>To showcase and promote modern lighting products through a clean, visually engaging online storefront.</p>
+            <div class="live-contact">
+                <a href="https://playful-biscotti-33eca5.netlify.app/" class="view-live">View Live Demo</a>
+                <a href="contact.html" class="view-contact">Contact Now</a>
+            </div>
+         </div>
+
+
+
+            <div class="project-box2">
+   <video autoplay loop muted playsinline>
+                <source src="assets/mp4/PAWHAAUSW.mp4">
+               </video>
+        </div>
+
+            <div class="projects-contain-box2">
+                <div class="title-box2">
+                    <h3>Pawhaus</h3>
+                    <p>A pet care service website that provides grooming, boarding, and training services for pets.</p>
+                    <div class="live-contact">
+                         <a href="https://playful-biscotti-33eca5.netlify.app/" class="view-live">View Live Demo</a>
+                <a href="contact.html" class="view-contact">Contact Now</a>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="project-box3">
+                   <video autoplay loop muted playsinline>
+                <source src="assets/mp4/CASSMART.mp4">
+               </video>
+        </div>
+
+        <div class="projects-contain-box3">
+        <div class="title-box3">
+            <h3>Cassmart</h3>
+            <p>A smart home automation website that allows users to control and monitor their home's appliances and devices.</p>
+            <div class="live-contact">
+                 <a href="https://cassmart.netlify.app/" class="view-live">View Live Demo</a>
+                <a href="contact.html" class="view-contact">Contact Now</a>
+        </div>
+        </div>
+        </div>
+
+
+            <div class="project-box4">
+   <video autoplay loop muted playsinline>
+                <source src="assets/mp4/BlendWell.mp4">
+               </video>
+        </div>
+
+         <div class="projects-contain-box4">
+            <div class="title-box4">
+                <h3>BlendWell</h3>
+                <p>A smoothie and juice bar website that offers a variety of healthy and delicious drinks made from fresh fruits and vegetables.</p>
+                <div class="live-contact">
+                     <a href="https://blendwell.netlify.app/" class="view-live">View Live Demo</a>
+                <a href="contact.html" class="view-contact">Contact Now</a>
+                </div>
+            </div>
+         </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="gallery-tech-stack-logo">
+
+    
+      <div class="more-tech-skills-projects">
+          <div class="tech-title-header">
+            <h3 class="project-gallery">Project Gallery</h3>
+            <h2 class="title-tech">List of Sample Projects...</h2>
+          </div>
+          <div class="tech-skills-container">
+                 <div class="tech-skills-box1">
+
+                 </div>
+
+
+                 <div class="tech-skills-box1">
+                    
+                 </div>
+
+
+                 <div class="tech-skills-box1">
+                    
+                 </div>
+
+                 <div class="tech-skills-box1">
+                    
+                 </div>
+
+                 <div class="tech-skills-box1">
+                    
+                 </div>
+
+            
+          </div>
+
+          <div class="tech-skills-logo">
+            <div class="tech-title-header">
+            <h3 class="tech-stack">Tech Stack</h3>
+          </div>
+          <div class="logo-tech-stack-wrapper">
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/html.png">
+            </div></a>
+
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/css.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/js.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/github.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/figma.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/netlify.jpg">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/wordpress.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/canva.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                <img src="assets/images/visual-studio-code-4096.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/gmail-email-logo-png-16.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/whaats.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/git.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/bootstrap.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/tailwind.jpg">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                  <img src="assets/images/chatgpt.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                  <img src="assets/images/chrome.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                 <img src="assets/images/paypal.png">
+            </div></a>
+            <a href="#"><div class="logo-box">
+                    <img src="assets/images/zoom.png">
+            </div></a>
+          </div>
+          </div>
+      </div>
+
+  </section>
+
+
+
+
+
+
 
 <section class="latest-updates">
       <div class="updates-header">
@@ -389,7 +603,7 @@
         <div class="let-me-help-you">           
              <p>Have a project in mind? Let's get started.</p>
              <h1>Let Me Help You</h1>
-            <a href="hire.html" class="contact-now">Contact Now</a>
+            <a href="contact.html" class="contact-now">Contact Now</a>
         </div>
     </div>
   </footer>
@@ -405,8 +619,7 @@
                 <li><a href="home.html">Home</a></li>
                  <li><a href="aboutUs.html">About</a></li>
                 <li><a href="pages.html">Pages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="404.html">404 Page</a></li>
+                <li><a href="mainservice.html">Services</a></li>
             </ul>
         </div>
          <div class="footer-link-box">
@@ -448,6 +661,28 @@
             <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
     </button>
+
+    <!-- Chat Box -->
+    <div class="chat-container" id="chatContainer">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open Chat">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Chat with AI</span>
+                <button class="chat-close" id="chatClose">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <span>Hello! I'm Edris' AI assistant. How can I help you today?</span>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Type your message..." />
+                <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
 
              </footer>
 

@@ -69,3 +69,42 @@
                 }
             });
         });
+
+        // Check if there is a saved image path in localStorage
+const savedPhoto = localStorage.getItem('resumePhoto');
+if (savedPhoto) {
+  photoImg.src = savedPhoto;
+  photoImg.style.display = 'block';
+  photoPlaceholder.style.display = 'none';
+}
+
+// ...
+
+// Function to handle file selection and display the selected image
+const handleFileSelect = function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+
+// ...
+
+// Function to save the selected image path to localStorage
+function savePhotoToLocalStorage(event) {
+  const file = event.target.files[0];
+  if (file) {
+    reader.readAsDataURL(file);
+    reader.onload = function(event) {
+      const savedPhoto = event.target.result;
+      localStorage.setItem('resumePhoto', savedPhoto);
+    };
+  }
+}
+
+// ...
+
+// Attach event listeners
+input.addEventListener('change', handleFileSelect);
+changePhotoBtn.addEventListener('change', savePhotoToLocalStorage);
+

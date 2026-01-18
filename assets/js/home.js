@@ -418,24 +418,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ////////////////////////////CODE FOR SCROLLING BACK AT THE TOP//////////////
 
-const backToTopButton = document.getElementById('backToTop');
-        
-        // Show button when user scrolls down 300px
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        // Scroll to top when button is clicked
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
         
 document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
   toggle.addEventListener('click', function(e) {
@@ -583,6 +565,165 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// BACK TO TOP BUTTON FUNCTIONALITY
+
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.getElementById('backToTop');
+  if (!backToTopButton) return; // element missing -> nothing to do
+
+  // ensure a predictable initial state
+  backToTopButton.style.display = 'none';
+  backToTopButton.classList.remove('visible');
+
+  const updateVisibility = () => {
+    if (window.scrollY > 50) {
+      backToTopButton.classList.add('visible');
+      backToTopButton.style.display = 'block'; // fallback if CSS class not present
+    } else {
+      backToTopButton.classList.remove('visible');
+      backToTopButton.style.display = 'none';
+    }
+  };
+
+  // update immediately (handles pages that load already scrolled)
+  updateVisibility();
+
+  // update on scroll (passive for better performance)
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+
+  // smooth scroll on click
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // keyboard accessibility
+  backToTopButton.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      backToTopButton.click();
+    }
+  });
+});
 
 
+const backToTopButton = document.getElementById('backToTop');
 
+window.addEventListener('scroll', () => {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > 50) {
+        backToTopButton.classList.add('visible');
+    } else {
+        backToTopButton.classList.remove('visible');
+    }
+});
+
+// Draggable horizontal scrolling for tech-skills-container
+const techSkillsContainer = document.querySelector('.tech-skills-container');
+if (techSkillsContainer) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    techSkillsContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        techSkillsContainer.style.cursor = 'grabbing';
+        startX = e.pageX - techSkillsContainer.offsetLeft;
+        scrollLeft = techSkillsContainer.scrollLeft;
+    });
+
+    techSkillsContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        techSkillsContainer.style.cursor = 'grab';
+    });
+
+    techSkillsContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        techSkillsContainer.style.cursor = 'grab';
+    });
+
+    techSkillsContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - techSkillsContainer.offsetLeft;
+        const walk = (x - startX) * 2; // scroll speed multiplier
+        techSkillsContainer.scrollLeft = scrollLeft - walk;
+    });
+}
+
+// Chat functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const chatToggle = document.getElementById('chatToggle');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const chatMessages = document.getElementById('chatMessages');
+
+    if (!chatToggle || !chatWindow || !chatClose || !chatInput || !chatSend || !chatMessages) {
+        return; // Exit if chat elements are not on the page
+    }
+
+    // Toggle chat window
+    chatToggle.addEventListener('click', function() {
+        chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Close chat window
+    chatClose.addEventListener('click', function() {
+        chatWindow.style.display = 'none';
+    });
+
+    // Send message function
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message === '') return;
+
+        // Add user message
+        addMessage(message, 'user-message');
+        chatInput.value = '';
+
+        // Simulate AI response
+        setTimeout(() => {
+            const response = getAIResponse(message);
+            addMessage(response, 'bot-message');
+        }, 1000);
+    }
+
+    // Add message to chat
+    function addMessage(text, className) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${className}`;
+        messageDiv.innerHTML = `<span>${text}</span>`;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Simple AI response function
+    function getAIResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+            return "Hello! Nice to meet you. How can I help you learn more about Edris?";
+        } else if (lowerMessage.includes('portfolio') || lowerMessage.includes('work')) {
+            return "Edris has an impressive portfolio showcasing web development projects. Check out the Projects section!";
+        } else if (lowerMessage.includes('hire') || lowerMessage.includes('contact')) {
+            return "You can hire Edris through the Contact page. He's available for freelance work!";
+        } else if (lowerMessage.includes('services')) {
+            return "Edris offers various web development services including front-end development, responsive design, and more.";
+        } else if (lowerMessage.includes('about')) {
+            return "Edris is a passionate web developer with expertise in modern technologies. Learn more in the About section.";
+        } else {
+            return "That's interesting! Feel free to ask me about Edris' skills, projects, or how to get in touch.";
+        }
+    }
+
+    // Send on button click
+    chatSend.addEventListener('click', sendMessage);
+
+    // Send on Enter key
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+});

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+     <link rel="icon" type="image/png" href="spiderGif.gif">
     <link rel="stylesheet" href="assets/css/blogContainerc.css">
     <link rel="stylesheet" href="assets/css/home.css">
 
@@ -87,7 +88,7 @@
     </div>
 </div>
         <div class="main-logo">
-           <a href="home.html"><img src="main-logo.png" alt="main-logo" class="edris-logo"></a>
+           <a href="home.html"><img src="./main-logo.png" alt="main-logo" class="edris-logo"></a>
         </div>
         <div class="list-menu-container">
             <ul>
@@ -395,12 +396,35 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
-    </button>>
-             </footer>
+    </button>
+    </footer>
+
+    <!-- Chat Box -->
+    <div class="chat-container" id="chatContainer">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open Chat">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Chat with AI</span>
+                <button class="chat-close" id="chatClose">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <span>Hello! I'm Edris' AI assistant. How can I help you today?</span>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Type your message..." />
+                <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
 
     <script src="spiderinex.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/blogContainer.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>

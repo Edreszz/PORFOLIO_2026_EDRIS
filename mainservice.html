@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services | Edris Ocampo Junior Web Developer</title>
+    <link rel="icon" type="image/png" href="spiderGif.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/mainservice.css">
+ 
+</head>
+<body>
+    <!-- Header - Same as home -->
+    <header class="header-sticky" id="navbar">
+        <div class="title-logo">
+            <a href="index.html"><h1><span class="span1">edrisocampo</span></h1></a>
+        </div>
+        <div class="contact-link">
+            <a href="contact.html">
+                <div class="hires-me">
+                    <a href="contact.html" class="btn-same">Hire Me</a>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+      <div class="menu-section" id="menu-section">
+    <div class="menu-container">
+        <!-- Mobile Menu Button -->
+<div class="mobile-menu-btn">
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-container">
+    <div class="mobile-menu">
+        <!-- Close Button -->
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        
+        <ul>
+            <li><a href="home.html" id="home-title">Home</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="mobile-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="services.html">Services</a>
+                    <a href="serviceDetail.html">Service Details</a>
+                </div>
+            </li>
+            <li class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">Blog <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="blog1.html">Blog List</a>
+                    <a href="blogContainer.html">Blog Insights</a>
+                    <a href="404.html">Code Hygiene</a>
+                    <a href="404.html">Framework Mastery</a>
+                    <a href="404.html">Front-End Vision</a>
+                </div>
+            </li>
+
+            
+            <li class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">Pages <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="aboutUs.html">About Edris</a>
+                    <a href="project.html">Project</a>
+                    <a href="404.html">Resume</a>
+        
+                </div>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="mobile-hire-btn">Hire Me</a>
+    </div>
+</div>
+
+        <div class="main-logo">
+           <a href="home.html"><img src="./main-logo.png" alt="main-logo" class="edris-logo"></a>
+        </div>
+        <div class="list-menu-container">
+            <ul>
+                <li>
+                    <a href="home.html" id="home-title">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle">Services</a>
+                    <div class="dropdown-menu ">  
+                        <a href="services.html" class="service-detail">Services</a>
+                        <a href="serviceDetail.html" class="service-detail">Service Details</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="blog1.html" class="dropdown-toggle">Blogs</a>
+                    <div class="dropdown-menu">
+                        <a href="blog1.html" class="blog-detail">Blog List</a>
+                        <a href="blogContainer.html" class="blog-detail">Blog Insights</a>
+                        <a href="404.html" class="blog-detail">Code Hygiene</a>
+                        <a href="404.html" class="blog-detail">Framework Mastery</a>
+                        <a href="404.html" class="blog-detail">Front-End Vision</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Pages</a>
+                    <div class="dropdown-menu">
+                        <a href="aboutUs.html" class="page-detail">About Edris</a>
+                        <a href="project.html" class="page-detail">Project</a>
+                        <a href="404.html" class="page-detail">Resume</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="contact.html" class="contact-id">Contact</a>    
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<section class="spacer-section">
+    <div class="spacer-header">
+        <h3>My Services</h3>
+    </div>
+    <div class="space-container">
+        <p><a href="home.html" class="service-home">Home</a>  <span class="arrow-space"> II</span>  <a href="services.html" class="services-list">Services List</a></p>
+    </div>
+</section>
+
+
+    <!-- Main Services Section -->
+    <section class="services-section">
+        <div class="section-header">
+            <div class="section-badge">
+         JUNIOR WEB DEVELOPER
+            </div>
+            <h1 class="section-title">
+                What<span class="title-highlight"> Services</span> I Offer
+            </h1>
+            <p class="section-description">
+                As a dedicated junior web developer, I provide comprehensive solutions that combine modern design, robust functionality, and optimized performance to bring your digital vision to life.
+            </p>
+
+            <!-- Service Category Tabs -->
+            <div class="service-tabs">
+                <button class="tab-btn active" data-tab="all">
+                    <i class="fas fa-layer-group"></i> All Services
+                </button>
+                <button class="tab-btn" data-tab="frontend">
+                    <i class="fas fa-code"></i> Frontend
+                </button>
+                <button class="tab-btn" data-tab="design">
+                    <i class="fas fa-pencil-ruler"></i> Design
+                </button>
+                <button class="tab-btn" data-tab="support">
+                    <i class="fas fa-headset"></i> Support
+                </button>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- Service 1: Web Design -->
+            <div class="service-card featured" data-category="design">
+                <div class="featured-badge">POPULAR</div>
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-paintbrush"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Web Design & UI/UX</h3>
+                        <span class="service-tag">Design Specialist</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Modern, user-centric web designs that blend aesthetics with functionality. From wireframes to high-fidelity prototypes using Figma.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Prototyping</span>
+                    <span class="tech-tag">UI/UX</span>
+                    <span class="tech-tag">Responsive</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Complete design systems & style guides</li>
+                    <li><i class="fas fa-check-circle"></i> Mobile-first responsive design</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive prototypes</li>
+                    <li><i class="fas fa-check-circle"></i> User research & testing recommendations</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Get Proposal
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 2: Front-End Development -->
+            <div class="service-card" data-category="frontend">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Frontend Development</h3>
+                        <span class="service-tag">Expert Level</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    High-quality, semantic HTML5, modern CSS3, and vanilla JavaScript or React. Pixel-perfect implementation with clean, maintainable code.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Responsive</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Semantic & accessible markup</li>
+                    <li><i class="fas fa-check-circle"></i> Responsive design (mobile-first)</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive components & animations</li>
+                    <li><i class="fas fa-check-circle"></i> Performance optimized</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Get Proposal
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 3: Responsive & Mobile Design -->
+            <div class="service-card" data-category="design frontend">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Responsive & Mobile Design</h3>
+                        <span class="service-tag">Mobile First</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Fully responsive websites that work flawlessly across all devices. Mobile-first approach ensuring optimal user experience on smartphones and tablets.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">Mobile Design</span>
+                    <span class="tech-tag">CSS Grid</span>
+                    <span class="tech-tag">Flexbox</span>
+                    <span class="tech-tag">Media Queries</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Mobile-first development approach</li>
+                    <li><i class="fas fa-check-circle"></i> Cross-device testing</li>
+                    <li><i class="fas fa-check-circle"></i> Touch-friendly interfaces</li>
+                    <li><i class="fas fa-check-circle"></i> Performance optimized for mobile</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 4: Performance & SEO -->
+            <div class="service-card" data-category="support">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Performance & SEO Optimization</h3>
+                        <span class="service-tag">Optimization Specialist</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Optimize your website for speed, search engines, and user experience. Achieve higher Google rankings and faster page loads with proven strategies.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">Core Web Vitals</span>
+                    <span class="tech-tag">SEO</span>
+                    <span class="tech-tag">Lighthouse</span>
+                    <span class="tech-tag">Analytics</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Performance audits & optimization</li>
+                    <li><i class="fas fa-check-circle"></i> SEO implementation & best practices</li>
+                    <li><i class="fas fa-check-circle"></i> Core Web Vitals improvement</li>
+                    <li><i class="fas fa-check-circle"></i> Speed optimization (40-60% improvement)</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i> View Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 5: Website Maintenance -->
+            <div class="service-card" data-category="support">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Website Maintenance & Bug Fixes</h3>
+                        <span class="service-tag">Ongoing Support</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Ongoing maintenance, updates, and bug fixes to keep your website running smoothly. Fast response times and reliable support included.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">Updates</span>
+                    <span class="tech-tag">Bug Fixes</span>
+                    <span class="tech-tag">Support</span>
+                    <span class="tech-tag">Monitoring</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Regular updates & patches</li>
+                    <li><i class="fas fa-check-circle"></i> Bug fixes within 24-48 hours</li>
+                    <li><i class="fas fa-check-circle"></i> Security monitoring</li>
+                    <li><i class="fas fa-check-circle"></i> Monthly reports & recommendations</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 6: Junior Developer Support -->
+            <div class="service-card featured" data-category="support frontend">
+                <div class="featured-badge">POPULAR</div>
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-title">Freelance & Internship Ready</h3>
+                        <span class="service-tag">Available Now</span>
+                    </div>
+                </div>
+                <p class="service-description">
+                    Available for freelance projects, internship opportunities, or full-time junior developer positions. Bring enthusiasm, clean code, and quick learning.
+                </p>
+
+                <div class="service-tech-stack">
+                    <span class="tech-tag">Freelance</span>
+                    <span class="tech-tag">Internship</span>
+                    <span class="tech-tag">Full-Time</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Quick turnaround on deliverables</li>
+                    <li><i class="fas fa-check-circle"></i> Clean, documented code</li>
+                    <li><i class="fas fa-check-circle"></i> Team collaboration & communication</li>
+                    <li><i class="fas fa-check-circle"></i> Eager to learn & adapt</li>
+                </ul>
+
+                <div class="service-footer">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-handshake"></i> Hire Me Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- HR Value Section -->
+        <div class="hr-section">
+            <div class="hr-header">
+                <div class="hr-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div>
+                    <h2 class="hr-title">Why Choose Me?</h2>
+                    <p class="hr-subtitle">Your ideal junior web developer for quality, reliability, and growth</p>
+                </div>
+            </div>
+
+            <div class="hr-benefits">
+                <div class="hr-benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Fast & Efficient</h4>
+                        <p>Deliver quality results on time without compromising on standards or attention to detail.</p>
+                    </div>
+                </div>
+
+                <div class="hr-benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Clear Communication</h4>
+                        <p>Weekly updates, transparent timelines, and proactive problem-solving throughout projects.</p>
+                    </div>
+                </div>
+
+                <div class="hr-benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Clean Code</h4>
+                        <p>Well-organized, documented code that's easy to maintain and scale for future development.</p>
+                    </div>
+                </div>
+
+                <div class="hr-benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Continuous Learning</h4>
+                        <p>Always improving skills, staying updated with latest web technologies and best practices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hr-cta">
+                <div class="hr-cta-content">
+                    <h3>Ready to start your project or hire a dedicated developer?</h3>
+                    <p>I'm actively seeking opportunities to work on challenging projects where I can deliver exceptional results and grow professionally.</p>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Schedule Call
+                </button>
+            </div>
+        </div>
+
+        <!-- Final CTA Section -->
+        <div class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Bring Your Idea to Life?</h2>
+                <p class="cta-description">
+                    Whether you need a complete website redesign, new web application, or ongoing development support, I'm here to help. Let's create something amazing together.
+                </p>
+
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Send Project Inquiry
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> View Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+                        <!-- PROJECTS COMPLETED -->
+    <section class="projects-completed">
+     <div class="projects-container">
+        <div class="projects-box">
+            <div class="icon-projects">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="div-text-projects">
+                <h3>30+</h3>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+        
+        <div class="projects-box">
+            <div class="icon-projects">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="div-text-projects">
+                <h3>10+</h3>
+                <p>Projects Compeleted</p>
+            </div>
+        </div>
+  <div class="projects-box">
+            <div class="icon-projects">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="div-text-projects">
+                <h3>2+</h3>
+                <p>Years of Experience</p>
+            </div>
+        </div>
+        
+        </div>
+
+     </div>
+    </section>
+    
+
+                   <!-- GET LATEST UPDATES -->
+
+
+<section class="latest-updates">
+      <div class="updates-header">
+         <span>||</span>
+        <h3>Connect with Edris</h3>
+      </div>
+      <div class="update-contact">
+            <div class="num">
+                <i class="fa-solid fa-phone"></i>
+                <span>+63 981-471-2972</span>
+            </div>
+            <div class="num2">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=edrisocampo64@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                <span>edrisocampo64@gmail.com</span>
+            </div>
+            <div class="icons-email-update">
+                <a href="https://www.facebook.com/VirtualAdmiral110702/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/edris-ocampo-b27512347/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </div>
+      </div>
+</section>
+      
+
+            <!-- FOOTER -->
+             <footer class="service-footer">
+                <div class="service-content-footer">
+     <p>&copy; 2021- 2025 <a href="aboutUs.html"><span>edrisocampo</span> </a> Portfolio</p>  
+     <a href="home.html"><img src="main-logo.png" alt="main-logo" class="service-logo"></a>
+     
+              <!-- SCROLL BACK TO TOP -->
+    </div>
+
+    
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+             </footer>
+
+  <script src="assets/js/mainservice.js"></script>
+</body>
+</html>

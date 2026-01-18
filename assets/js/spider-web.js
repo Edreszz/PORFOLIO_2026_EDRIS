@@ -162,4 +162,138 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.querySelectorAll('g').forEach(g => g.remove());
     if (autoSpawnTimer) { clearTimeout(autoSpawnTimer); autoSpawnTimer = null; }
   });
+
+  // --------------------------------------------------
+  // Anchored webs + bridges + walking spiders
+  // create persistent webs on project-box1..4 and draw bridges between them
+  // --------------------------------------------------
+
+  const ANCHORED_GROUP_ID = 'anchored-webs-group';
+
+  function getBoxCenters() {
+    const centers = [];
+    for (let i = 1; i <= 4; i++) {
+      const el = document.querySelector('.project-box' + i);
+      if (!el) continue;
+      const rect = el.getBoundingClientRect();
+      centers.push({
+        id: 'project-box' + i,
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2
+      });
+    }
+    return centers;
+  }
+
+  function clearAnchored() {
+    const existing = overlay.querySelector('#' + ANCHORED_GROUP_ID);
+    if (existing) existing.remove();
+  }
+
+  function createAnchoredNetwork() {
+    clearAnchored();
+    const centers = getBoxCenters();
+    if (!centers.length) return;
+
+    const group = createElement('g');
+    group.id = ANCHORED_GROUP_ID;
+    overlay.appendChild(group);
+
+    // create small webs at each anchor
+    centers.forEach((c, idx) => {
+      const g = createElement('g');
+      g.setAttribute('transform', `translate(${c.x}, ${c.y})`);
+      g.classList.add('anchored-web');
+      group.appendChild(g);
+
+      const spokes = 8;
+      const rings = 3;
+      const maxR = Math.min(window.innerWidth, window.innerHeight) * 0.06;
+      const strokeColor = 'rgba(255,255,255,0.14)';
+
+      for (let i = 0; i < spokes; i++) {
+        const angle = (Math.PI * 2 * i) / spokes;
+        const x2 = Math.cos(angle) * maxR;
+        const y2 = Math.sin(angle) * maxR;
+        const line = createElement('line');
+        line.setAttribute('x1', '0');
+        line.setAttribute('y1', '0');
+        line.setAttribute('x2', x2);
+        line.setAttribute('y2', y2);
+        line.setAttribute('stroke', strokeColor);
+        line.setAttribute('stroke-width', '1');
+        line.setAttribute('stroke-linecap', 'round');
+        g.appendChild(line);
+      }
+
+      for (let r = 1; r <= rings; r++) {
+        const radius = (maxR * r) / (rings + 0.5);
+        let d = '';
+        for (let s = 0; s < spokes; s++) {
+          const angle = (Math.PI * 2 * s) / spokes;
+          const x = Math.cos(angle) * radius;
+          const y = Math.sin(angle) * radius;
+          d += (s === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`);
+        }
+        d += ' Z';
+        const path = createElement('path');
+        path.setAttribute('d', d);
+        path.setAttribute('stroke', strokeColor);
+        path.setAttribute('stroke-width', '1');
+        path.setAttribute('fill', 'none');
+        g.appendChild(path);
+      }
+    });
+
+    // create bridges (paths) between every adjacent center
+    const bridgesGroup = createElement('g');
+    bridgesGroup.classList.add('bridges-group');
+    group.appendChild(bridgesGroup);
+
+    const bridgeColor = 'rgba(255,255,255,0.10)';
+    const spiderSrc = './spiderGif.gif';
+    for (let i = 0; i < centers.length; i++) {
+      for (let j = i + 1; j < centers.length; j++) {
+        const a = centers[i];
+        const b = centers[j];
+        const path = createElement('path');
+        const id = `bridge-path-${i}-${j}`;
+        path.id = id;
+        const d = `M ${a.x} ${a.y} L ${b.x} ${b.y}`;
+        path.setAttribute('d', d);
+        path.setAttribute('stroke', bridgeColor);
+        path.setAttribute('stroke-width', '1');
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke-linecap', 'round');
+        bridgesGroup.appendChild(path);
+
+        // add a spider that walks along this path infinitely
+        const img = createElement('image');
+        img.setAttribute('width', '26');
+        img.setAttribute('height', '26');
+        // attempt both hrefs for compatibility
+        img.setAttribute('href', spiderSrc);
+        img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', spiderSrc);
+        img.classList.add('bridge-spider');
+        bridgesGroup.appendChild(img);
+
+        // animateMotion element (SMIL) for continuous walk
+        const animateMotion = createElement('animateMotion');
+        animateMotion.setAttribute('dur', `${4 + Math.random() * 6}s`);
+        animateMotion.setAttribute('repeatCount', 'indefinite');
+        animateMotion.setAttribute('rotate', 'auto');
+        const mpath = createElement('mpath');
+        // xlink:href to path id
+        mpath.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', `#${id}`);
+        animateMotion.appendChild(mpath);
+        img.appendChild(animateMotion);
+      }
+    }
+  }
+
+  // initial create anchored network and update on resize/DOM changes
+  createAnchoredNetwork();
+  window.addEventListener('resize', () => {
+    createAnchoredNetwork();
+  });
 });
