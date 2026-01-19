@@ -136,7 +136,7 @@
  
                                 <!--StartMy Profile-->
 
-     <section class="my-profile scale-in">
+     <section class="my-profile">
           <div class="main-logo-home">
             <a href="#"><img src="main-logo.png"></a>
           </div>
@@ -188,7 +188,7 @@
     
     <div class="services-container">
         <!-- Development Services -->
-        <div class="service-category slide-in-left">
+        <div class="service-category">
             <h3>Web Development</h3>
             <div class="service-card">
                 <h4>HTML / CSS Development</h4>
@@ -209,7 +209,7 @@
         </div>
         
         <!-- Web Design (UI/UX) Services -->
-        <div class="service-category slide-in-right">
+        <div class="service-category">
             <h3>Web Design (UI/UX)</h3>
             
 
@@ -232,7 +232,7 @@
         </div>
         
         <!-- UI/UX Services -->
-        <div class="service-category slide-in-left">
+        <div class="service-category">
             <h3>Website Features & Enhancements</h3>
             <div class="service-card">
                 <h4>Scroll Animations & Micro-Interactions</h4>
@@ -607,7 +607,7 @@
         </div>
     </div>
   </footer>
-  <footer>
+  <!-- <footer class="fade-section"> -->
      <div class="important-footer">
         <div class="footer-link-box">
             <h1>Edris Ocampo</h1>
@@ -689,6 +689,18 @@
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="assets/js/home.js"></script>
    <!-- <script src="assets/js/loadingScreen.js"></script> -->
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           const observer = new IntersectionObserver((entries) => {
+               entries.forEach(entry => {
+                   if (entry.isIntersecting) {
+                       entry.target.classList.add('visible');
+                   }
+               });
+           }, { threshold: 0.1 });
+           document.querySelectorAll('.fade-section, .scale-in').forEach(el => observer.observe(el));
+       });
+   </script>
 </body>
 </html>
                 

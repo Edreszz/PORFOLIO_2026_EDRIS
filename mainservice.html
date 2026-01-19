@@ -479,6 +479,8 @@
     </section>
 
 
+
+
                         <!-- PROJECTS COMPLETED -->
     <section class="projects-completed">
      <div class="projects-container">
@@ -561,5 +563,17 @@
              </footer>
 
   <script src="assets/js/mainservice.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                  }
+              });
+          }, { threshold: 0.1 });
+          document.querySelectorAll('.fade-section, .slide-in-left, .slide-in-right').forEach(el => observer.observe(el));
+      });
+  </script>
 </body>
 </html>

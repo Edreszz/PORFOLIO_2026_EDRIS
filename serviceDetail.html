@@ -293,7 +293,7 @@
 </section>
 
             <!-- FOOTER -->
-             <footer class="service-footer">
+             <footer class="service-footer fade-section">
                 <div class="service-content-footer">
      <p>&copy; 2021- 2025 <a href="aboutUs.html"><span>edrisocampo</span> </a> Portfolio</p>  
      <a href="home.html"><img src="main-logo.png" alt="main-logo" class="service-logo"></a>
@@ -313,5 +313,17 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/serviceDetail.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
